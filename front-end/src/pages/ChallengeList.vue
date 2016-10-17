@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <div v-for="chall in $root.challenges" class="challenge col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      <router-link :to="'/challenge/' + chall.id" class="box">
+    <div v-for="(chall, idx) in $root.challenges"
+         class="challenge col-xs-12 col-sm-6 col-md-4 col-lg-3"
+         :class="{solved: chall.solved}">
+      <router-link :to="'/challenge/' + idx" class="box">
         <h3>{{chall.name}}</h3>
         <p class="categories">{{chall.categories | categories}}</p>
       </router-link>
@@ -33,6 +35,17 @@ export default {
     padding: 1.5em;
     background-color: #2777ab;
     text-align: center;
+  }
+
+  &.solved {
+    .box {
+      background-color: #696969; //#27ab65;
+      color: #ccc;
+      h3 {
+        color: inherit;
+        text-decoration: line-through;
+      }
+    }
   }
 }
 </style>
