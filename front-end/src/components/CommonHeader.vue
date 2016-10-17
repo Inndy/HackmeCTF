@@ -20,7 +20,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li v-if="has_loggedin">
               <p class="navbar-text">
-                <span class="username">{{$root.user.name}}</span>
+                <router-link active-class="active" exact to="/profile" class="username">{{$root.user.name}}</router-link>
                 ({{$root.user.pts}} pts)
               </p>
             </li>

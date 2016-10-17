@@ -17,6 +17,7 @@ const router = new VueRouter({
     { path: '/login',         component: require('./pages/Login.vue') },
     { path: '/logout',        component: require('./pages/Logout.vue') },
     { path: '/register',      component: require('./pages/Register.vue') },
+    { path: '/profile',       component: require('./pages/Profile.vue') },
     { path: '/challenge',     component: require('./pages/ChallengeList.vue') },
     { path: '/challenge/:id', component: require('./pages/Challenge.vue') },
   ]
