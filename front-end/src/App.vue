@@ -2,6 +2,7 @@
   <div>
     <common-header></common-header>
     <router-view></router-view>
+    <common-footer></common-footer>
   </div>
 </template>
 
@@ -10,9 +11,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import CommonHeader from './components/CommonHeader.vue'
+import CommonFooter from './components/CommonFooter.vue'
 
 export default {
-  components: { CommonHeader },
+  components: { CommonHeader, CommonFooter },
   created () {
     var I = 0
     var S = 12345 + (new Date())
