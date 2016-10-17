@@ -31,22 +31,5 @@ export default {
 
 <style lang="scss">
 @import 'bootstrap/css/bootstrap.min.css';
-
-body {
-  font-family: 'NotoSans CJK TC', 'PingFang TC',
-               'Microsoft YaHei', 'Microsoft JhengHei',
-               'OpenSans', Helvetica, sans-serif;
-  background-color: #555;
-  color: #ddd;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #fff;
-    text-shadow: 1px 1px .03em #333;
-  }
-}
-
-.jumbotron {
-  background-color: #333;
-  color: #eee;
-}
+@import 'style/theme.scss';
 </style>

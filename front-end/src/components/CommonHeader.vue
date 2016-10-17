@@ -7,7 +7,7 @@
     </header>
 
     <div class="container">
-      <nav class="navbar navbar-default navbar-inverse">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <ul class="nav navbar-nav">
             <li><router-link active-class="active" exact to="/">Home</router-link></li>
@@ -48,14 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav.navbar {
-  background-color: #1a2933;
-  .active {
-    font-weight: bold;
-    color: #fff;
-  }
-}
-
 .username {
   color: #eef;
   font-weight: bold;
