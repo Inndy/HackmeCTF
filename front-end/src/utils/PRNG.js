@@ -10,8 +10,8 @@ class WeakPRNG {
     this.s2 = ((this.s2 * 33797 + 1) & 0x7fffffff)
     this.s3 = this.s3 ^ (0x7fffffff * Math.random())
     var v1 = (this.s1 >> 11) & 0xffff
-    var v2 = ((this.s2 >> 13) & 0xffff) < 15
-    var v3 = (this.s3 >> 17) & 0x0f0f0f0f
+    var v2 = ((this.s2 >> 13) & 0xffff) << 15
+    var v3 = this.s3 & 0x0f0f0f0f
     return v1 ^ v2 ^ v3
   }
 
