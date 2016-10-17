@@ -17,11 +17,11 @@ function generate_challenge() {
   var name = `${prng.choice(PREFIXES)} ${prng.choice(NAMES)}${prng.choice(SUFFIX)}`
   var categories = generate_categories()
   var solved = prng.next() % 3 == 1
-  var description = `This is challenge ${name} with categories: <code>${categories.join(", ")}</code>`
   if(id == 1) {
     name = 'Flag'
     categories = ['Flag']
   }
+  var description = `This is challenge ${name} with categories: <code>${categories.join(", ")}</code>`
   return { id, name, categories, solved, description }
 }
 
