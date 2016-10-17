@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Login</h1>
-    <button @click="do_login">Login</button>
+    <button @click="do_login" class="btn btn-primary">Login</button>
   </div>
 </template>
 

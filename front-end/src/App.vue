@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'bootstrap/css/bootstrap.min.css';
+
 body {
   font-family: 'NotoSans CJK TC', 'PingFang TC',
                'Microsoft YaHei', 'Microsoft JhengHei',

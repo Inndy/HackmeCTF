@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 
 import App from './App.vue'
 
+import 'jquery'
+import './bootstrap/js/bootstrap.min.js'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
