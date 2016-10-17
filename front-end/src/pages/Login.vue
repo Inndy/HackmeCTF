@@ -9,7 +9,7 @@
 export default {
   methods: {
     do_login () {
-      this.$root.user = { name: 'Inndy', token: '123123123123' }
+      this.$root.user = { name: 'Inndy', token: '123123123123', pts: 1000 }
       this.$router.push('/challenge')
     }
   }

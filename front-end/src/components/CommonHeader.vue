@@ -1,15 +1,38 @@
 <template>
   <div>
-    <header>
-      <h1>Hackme CTF</h1>
+    <header class="jumbotron">
+      <div class="container">
+        <h1>Hackme Pls</h1>
+      </div>
     </header>
 
-    <div class="menu">
-      <router-link to="/">Home</router-link>
-      <router-link to="/challenge" v-show="has_loggedin">Challenge</router-link>
-      <router-link to="/login" v-show="!has_loggedin">Login</router-link>
-      <router-link to="/register" v-show="!has_loggedin">Register</router-link>
-      <router-link to="/logout" v-show="has_loggedin">Logout</router-link>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/challenge" v-show="has_loggedin">Challenges</router-link></li>
+            <li><router-link to="/login" v-show="!has_loggedin">Login</router-link></li>
+            <li><router-link to="/register" v-show="!has_loggedin">Register</router-link></li>
+            <li><router-link to="/logout" v-show="has_loggedin">Logout</router-link></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li v-if="has_loggedin">
+              <p class="navbar-text">
+                <span class="username">{{$root.user.name}}</span>
+                ({{$root.user.pts}} pts)
+              </p>
+            </li>
+            <li>
+              <a href="https://telegram.me/joinchat/A4vRIj-Ij-OMbpaLitQKCg">Offical Chat Room</a>
+            </li>
+            <li>
+              <a href="https://www.inndy.tw/" target="_blank">Author</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
 </template>
@@ -25,7 +48,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-  padding: 2em;
+.username {
+  color: #eef;
+  font-weight: bold;
 }
 </style>

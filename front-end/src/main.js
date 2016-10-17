@@ -7,6 +7,7 @@ import 'jquery'
 import './bootstrap/js/bootstrap.min.js'
 
 Vue.use(VueRouter)
+Vue.filter('categories', x => x.join(', '))
 
 const router = new VueRouter({
   mode: 'history',
