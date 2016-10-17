@@ -13,12 +13,12 @@ const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    { path: '/',              name: 'home',           component: require('./pages/Index.vue') },
-    { path: '/login',         name: 'login',          component: require('./pages/Login.vue') },
-    { path: '/logout',        name: 'logout',         component: require('./pages/Logout.vue') },
-    { path: '/register',      name: 'register',       component: require('./pages/Register.vue') },
-    { path: '/challenge',     name: 'list-challenge', component: require('./pages/ChallengeList.vue') },
-    { path: '/challenge/:id', name: 'challenge',      component: require('./pages/Challenge.vue') },
+    { path: '/',              component: require('./pages/Index.vue') },
+    { path: '/login',         component: require('./pages/Login.vue') },
+    { path: '/logout',        component: require('./pages/Logout.vue') },
+    { path: '/register',      component: require('./pages/Register.vue') },
+    { path: '/challenge',     component: require('./pages/ChallengeList.vue') },
+    { path: '/challenge/:id', component: require('./pages/Challenge.vue') },
   ]
 })
 
