@@ -4,7 +4,7 @@
          class="challenge col-xs-12 col-sm-6 col-md-4 col-lg-3"
          :class="{solved: chall.solved}">
       <router-link :to="'/challenge/' + idx" class="box">
-        <h3>{{chall.name}}</h3>
+        <h3 class="name">{{chall.name}}</h3>
         <p class="categories">{{chall.categories | categories}}</p>
       </router-link>
     </div>
@@ -14,7 +14,6 @@
 <script>
 export default {
   created() {
-    console.log(this.$root.challenges)
   }
 }
 </script>
@@ -32,7 +31,7 @@ export default {
     display: inline-block;
     width:: 100%;
     height: 100%;
-    padding: 1.5em;
+    padding: 1.5em .5em;
     background-color: #2777ab;
     text-align: center;
   }
@@ -41,7 +40,7 @@ export default {
     .box {
       background-color: #696969; //#27ab65;
       color: #ccc;
-      h3 {
+      .name {
         color: inherit;
         text-decoration: line-through;
       }
