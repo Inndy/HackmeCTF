@@ -3,7 +3,7 @@
     <div class="container">
       <p>
         Copyright &copy; 2016 Inndy Lin, MIT licesned.
-        Source code available on <a href="https://github.com/inndy/hackctf">GitHub</a>.
+        Source code available on <a href="https://github.com/inndy/HackmeCTF">GitHub</a>.
       </p>
     </div>
   </footer>
