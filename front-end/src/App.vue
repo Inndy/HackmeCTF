@@ -20,7 +20,7 @@ export default {
     var S = 12345 + (new Date())
     function rand() {
       S = ((S * 1103515245) & 0x7fffffff) + 12345
-      return S & 0xffff;
+      return S & 0xffff
     }
     function shuffle(arr) {
       for(var i = 0; i < arr.length; i++) {
@@ -31,18 +31,35 @@ export default {
       }
       return arr
     }
-    function categories(n) {
-      const CATEGORIES = ['Misc', 'Web', 'Forensic', 'Reverse', 'Pwn', 'Crypto', 'PPC'];
+    function choice(L) {
+      return L[rand() % L.length]
+    }
+    function mkname(i) {
+      const PREFIXES = 'Baby,Easy,Trivial,Revenge,Hard,Hell,Very'.split(/,/g)
+      const NAMES = 'PPAP,Web,Guestbook,Homework,SQLi,Overflow,BoF,ROP,Heap,Calc,Math,RSA,DES,AES'.split(/,/g)
+      const SUFFIX = '-ng,,,,'.split(/,/g)
+      if(i == 1) {
+        return 'Flag'
+      } else {
+        return `${choice(PREFIXES)} ${choice(NAMES)}${choice(SUFFIX)}`
+      }
+    }
+    function categories(i, n) {
+      if(i == 1)
+        return ['Flag']
+      const CATEGORIES = ['Misc', 'Web', 'Forensic', 'Reverse', 'Pwn', 'Crypto', 'PPC']
       return shuffle(Array.from(CATEGORIES)).slice(0, n)
     }
     function gen() {
+      I++
       return {
-        id: ++I,
-        name: `Challenge ${i}`,
-        categories: categories(1 + ~~(Math.random() * 4))
+        id: I,
+        name: mkname(I),
+        categories: categories(I, 1 + ~~(Math.random() * 4)),
+        solved: rand() % 3 == 1
       }
     }
-    for(var i = 0; i < 10; i++)
+    for(var i = 0; i < 32; i++)
       this.$root.challenges.push(gen())
   },
   methods: {
