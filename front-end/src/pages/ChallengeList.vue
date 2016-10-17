@@ -5,7 +5,7 @@
          :class="{solved: chall.solved}">
       <router-link :to="'/challenge/' + idx" class="box">
         <h3 class="name">{{chall.name}}</h3>
-        <p class="categories">{{chall.categories | categories}}</p>
+        <p class="categories">{{chall.categories | categories('')}}</p>
       </router-link>
     </div>
   </div>
