@@ -10,7 +10,7 @@ Vue.use(VueRouter)
 Vue.filter('categories', (x, prefix) => (prefix == undefined ? 'Categories: ' : prefix) + x.join(', '))
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: __dirname,
   routes: [
     { path: '/',              component: require('./pages/Index.vue') },
