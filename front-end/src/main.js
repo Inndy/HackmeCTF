@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 
 import App from './App.vue'
 
@@ -7,6 +8,8 @@ import 'jquery'
 import './bootstrap/js/bootstrap.min.js'
 
 Vue.use(VueRouter)
+Vue.use(VueResource)
+
 Vue.filter('categories', (x, prefix) => (prefix == undefined ? 'Categories: ' : prefix) + x.join(', '))
 
 const router = new VueRouter({
