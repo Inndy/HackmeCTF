@@ -17,12 +17,18 @@ function generate_challenge() {
   var name = `${prng.choice(PREFIXES)} ${prng.choice(NAMES)}${prng.choice(SUFFIX)}`
   var categories = generate_categories()
   var solved = prng.next() % 3 == 1
+  var url = 'https://hackme.inndy.tw/socreboard/flag'
+  var solved_count = prng.rand(17)
+  var points = prng.rand(6) * 50 + 50
+
   if(id == 1) {
     name = 'Flag'
     categories = ['Flag']
+    points = 50
   }
+
   var description = `This is challenge ${name} with categories: <code>${categories.join(", ")}</code>`
-  return { id, name, categories, solved, description }
+  return { id, name, categories, solved, description, url, solved_count }
 }
 
 export default {
