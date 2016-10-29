@@ -13,7 +13,7 @@
 
             <div class="navbar-brand">
               <router-link to="/">
-                Hackme Pls
+                Hackme CTF
               </router-link>
             </div>
           </div>
