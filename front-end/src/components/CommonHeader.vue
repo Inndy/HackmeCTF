@@ -21,11 +21,6 @@
           <div class="navbar-collapse collapse" id="collapse-menu">
             <ul class="nav navbar-nav">
               <li>
-                <router-link active-class="active" exact to="/">
-                  Home
-                </router-link>
-              </li>
-              <li>
                 <router-link active-class="active" exact to="/challenge" v-show="has_loggedin">
                   Challenges
                 </router-link>
