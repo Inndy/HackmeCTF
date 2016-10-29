@@ -7,6 +7,11 @@
 
 <script>
 export default {
+  created () {
+    if (this.$root.user)
+      this.$router.push('/challenge')
+
+  },
   methods: {
     do_login () {
       this.$root.user = { name: 'Inndy', token: '123123123123', pts: 1000 }

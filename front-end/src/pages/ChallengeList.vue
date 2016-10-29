@@ -14,6 +14,8 @@
 <script>
 export default {
   created() {
+    if(!this.$root.user)
+      this.$router.push('/login')
   }
 }
 </script>
