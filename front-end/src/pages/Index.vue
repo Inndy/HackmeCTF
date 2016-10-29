@@ -7,27 +7,27 @@
     </div>
 
     <div class="container">
-      <router-link to="/login" class="btn btn-success btn-block play-now">
-        Play Now
-      </router-link>
+      <div class="col-xs-12 col-md-8 col-lg-6">
+        <router-link to="/login" class="btn btn-success btn-block play-now">
+          Play Now
+        </router-link>
+      </div>
 
-      <h2>About This</h2>
+      <div class="col-xs-12">
+        <h2>About This</h2>
 
-      <p>This is a platform for CTF beginner! Enjoy your CTF :)</p>
-      <p>If you have any problem about challenages, just contact me and don't be shy. :D</p>
-    </div>
+        <p>This is a platform for CTF beginner! Enjoy your CTF :)</p>
+        <p>If you have any problem about challenages, just contact me and don't be shy. :D</p>
 
-    <div class="container">
-      <h2>da da da da da</h2>
+        <h2>da da da da da</h2>
 
-      <img class="image-responsive" src="https://i.giphy.com/HoffxyN8ghVuw.gif">
-    </div>
+        <img class="image-responsive" src="https://i.giphy.com/HoffxyN8ghVuw.gif">
 
-    <div class="container">
-      <p>
-        Good Luck!
-        <span class="hidden-flag">FLAG{0h U C meeeeeeeeeeeeeeeeeeee!}</span>
-      </p>
+        <p>
+          Good Luck!
+          <span class="hidden-flag">FLAG{0h U C meeeeeeeeeeeeeeeeeeee!}</span>
+        </p>
+      </div>
     </div>
 
     <div v-html="'<style>nav.navbar { display: none; }</style>'"></div>
