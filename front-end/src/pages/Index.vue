@@ -1,6 +1,16 @@
 <template>
   <div>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hackme CTF</h1>
+      </div>
+    </div>
+
     <div class="container">
+      <router-link to="/login" class="btn btn-success btn-block play-now">
+        Play Now
+      </router-link>
+
       <h2>About This</h2>
 
       <p>This is a platform for CTF beginner! Enjoy your CTF :)</p>
@@ -19,10 +29,18 @@
         <span class="hidden-flag">FLAG{0h U C meeeeeeeeeeeeeeeeeeee!}</span>
       </p>
     </div>
+
+    <div v-html="'<style>nav.navbar { display: none; }</style>'"></div>
+    <!-- Hack to hide navbar in homepage -->
   </div>
 </template>
 
 <style lang="scss">
+.play-now {
+  font-size: 2.4em;
+  line-height: 2em;
+}
+
 .hidden-flag {
   opacity: 0;
   color: rgba(255, 255, 255, 0);
