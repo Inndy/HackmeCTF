@@ -12,6 +12,13 @@ Vue.use(VueResource)
 
 Vue.filter('categories', (x, prefix) => (prefix == undefined ? 'Categories: ' : prefix) + x.join(', '))
 
+Vue.filter('url_text', (url) => {
+  var parser = document.createElement('a')
+  parser.href = url
+
+  return parser.pathname === '/' ? url : url.replace(/\/?$/, '').replace(/.*\//g, '')
+})
+
 const router = new VueRouter({
   mode: 'hash',
   base: __dirname,
