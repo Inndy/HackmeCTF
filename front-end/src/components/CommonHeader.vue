@@ -1,36 +1,67 @@
 <template>
   <div>
-    <header class="jumbotron">
-      <div class="container">
-        <h1>Hackme Pls</h1>
-      </div>
-    </header>
-
     <div class="container">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
-          <ul class="nav navbar-nav">
-            <li><router-link active-class="active" exact to="/">Home</router-link></li>
-            <li><router-link active-class="active" exact to="/challenge" v-show="has_loggedin">Challenges</router-link></li>
-            <li><router-link active-class="active" exact to="/login" v-show="!has_loggedin">Login</router-link></li>
-            <li><router-link active-class="active" exact to="/register" v-show="!has_loggedin">Register</router-link></li>
-            <li><router-link active-class="active" exact to="/logout" v-show="has_loggedin">Logout</router-link></li>
-          </ul>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li v-if="has_loggedin">
-              <p class="navbar-text">
-                <router-link active-class="active" exact to="/profile" class="username">{{$root.user.name}}</router-link>
-                ({{$root.user.pts}} pts)
-              </p>
-            </li>
-            <li>
-              <a href="https://telegram.me/joinchat/A4vRIj-Ij-OMbpaLitQKCg">Offical Chat Room</a>
-            </li>
-            <li>
-              <a href="https://www.inndy.tw/" target="_blank">Author</a>
-            </li>
-          </ul>
+            <div class="navbar-brand">
+              <p>Hackme Pls</p>
+            </div>
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <router-link active-class="active" exact to="/">
+                  Home
+                </router-link>
+              </li>
+              <li>
+                <router-link active-class="active" exact to="/challenge" v-show="has_loggedin">
+                  Challenges
+                </router-link>
+              </li>
+              <li>
+                <router-link active-class="active" exact to="/login" v-show="!has_loggedin">
+                  Login
+                </router-link>
+              </li>
+              <li>
+                <router-link active-class="active" exact to="/register" v-show="!has_loggedin">
+                  Register
+                </router-link>
+              </li>
+              <li>
+                <router-link active-class="active" exact to="/logout" v-show="has_loggedin">
+                  Logout
+                </router-link>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li v-if="has_loggedin">
+                <p class="navbar-text">
+                  <router-link active-class="active" exact to="/profile" class="username">
+                    {{$root.user.name}}
+                  </router-link>
+                  ({{$root.user.pts}} pts)
+                </p>
+              </li>
+              <li>
+                <a href="https://telegram.me/joinchat/A4vRIj-Ij-OMbpaLitQKCg">Offical Chat Room</a>
+              </li>
+              <li>
+                <a href="https://www.inndy.tw/" target="_blank">Author</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
@@ -48,6 +79,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+nav {
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
 .username {
   color: #eef;
   font-weight: bold;
