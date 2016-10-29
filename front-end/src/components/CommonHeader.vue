@@ -12,7 +12,9 @@
             </button>
 
             <div class="navbar-brand">
-              <p>Hackme Pls</p>
+              <router-link to="/">
+                Hackme Pls
+              </router-link>
             </div>
           </div>
 
@@ -83,7 +85,7 @@ nav {
   border-top: 0;
   border-radius: 0 0 4px 4px;
 
-  .navbar-brand {
+  .navbar-brand > * {
     color: #fff;
     font-weight: bold;
   }
