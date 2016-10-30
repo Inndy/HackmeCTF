@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="container">
-      <nav class="navbar navbar-default">
+    <div>
+      <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
@@ -44,12 +44,10 @@
 
             <ul class="nav navbar-nav navbar-right">
               <li v-if="has_loggedin">
-                <p class="navbar-text">
-                  <router-link active-class="active" exact to="/profile" class="username">
-                    <span>{{$root.user.name}}</span>
-                  </router-link>
+                <router-link active-class="active" exact to="/profile" class="username">
+                  <span>{{$root.user.name}}</span>
                   ({{$root.user.pts}} pts)
-                </p>
+                </router-link>
               </li>
               <li>
                 <a href="https://telegram.me/joinchat/A4vRIj-Ij-OMbpaLitQKCg">Offical Chat Room</a>
@@ -77,16 +75,13 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  border-top: 0;
-  border-radius: 0 0 4px 4px;
-
   .navbar-brand > * {
     color: #fff;
     font-weight: bold;
   }
 }
 
-.username {
+.username > span {
   color: #eef;
   font-weight: bold;
 }
