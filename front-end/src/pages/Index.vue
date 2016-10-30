@@ -7,18 +7,20 @@
     </div>
 
     <div class="container">
-      <div class="col-xs-12 col-md-8 col-lg-6">
+      <div class="col-xs-12 col-md-6 col-lg-4 pull-right">
         <router-link to="/login" class="btn btn-success btn-block play-now">
           Play Now
         </router-link>
       </div>
 
-      <div class="col-xs-12">
+      <div class="col-md-6 col-lg-8 pull-left">
         <h2>About This</h2>
 
         <p>This is a platform for CTF beginner! Enjoy your CTF :)</p>
         <p>If you have any problem about challenages, just contact me and don't be shy. :D</p>
+      </div>
 
+      <div class="col-xs-12">
         <h2>da da da da da</h2>
 
         <img class="image-responsive" src="https://i.giphy.com/HoffxyN8ghVuw.gif">
@@ -38,11 +40,15 @@
 <style lang="scss">
 .play-now {
   font-size: 2.4em;
-  line-height: 2em;
+  line-height: 3em;
 }
 
 .hidden-flag {
   opacity: 0;
   color: rgba(255, 255, 255, 0);
+}
+
+img {
+  max-width: 100%;
 }
 </style>
